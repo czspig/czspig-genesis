@@ -80,11 +80,14 @@ html[lang='en'] body:not(.wide) #card h2 { font-size: 30px; }
 #card .verse { margin: 0 0 14px; padding-left: 12px; border-left: 2px solid rgba(201, 164, 92, 0.5); color: var(--ink-dim); font-size: 0.92em; }
 html[lang='en'] #card .verse { font-style: italic; }
 #card .text { display: grid; }
-#card .about, #card .meaning { grid-area: 1 / 1; margin: 0; transition: opacity 0.7s; }
+#card .about, #card .meaning { grid-area: 1 / 1; transition: opacity 0.7s; }
+#card .text p { margin: 0; }
+#card .lab { font-size: 13px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
+#card .text > .meaning .lab { color: var(--cold); }
 #card .meaning { opacity: 0; }
 #card.meaning .about { opacity: 0; }
 #card.meaning .meaning { opacity: 1; }
-#card .meaning::first-letter { color: var(--cold); }
+#card .text > .meaning p::first-letter { color: var(--cold); }
 #card .badge { display: none; margin-top: 12px; font-size: 13px; color: var(--gold); border: 1px dashed rgba(201, 164, 92, 0.6); border-radius: 999px; padding: 1px 10px; width: fit-content; }
 #card.pending .badge { display: block; }
 #card .hint { margin-top: 10px; font-size: 13px; color: var(--cold); opacity: 0.8; min-height: 1em; }

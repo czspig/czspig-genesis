@@ -12,12 +12,12 @@ export const PANELS = [
       en: 'And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness.',
     },
     about: {
-      zh: '这是米开朗基罗最后画到的一格，却是故事的第一格。越往祭坛画，他下笔越放得开：这里只剩神一个人，从正下方望上去，身体在混沌里拧转，把光和暗推向两边。',
-      en: 'The last bay Michelangelo reached, and the first scene of the story. The closer he came to the altar, the freer his hand: here only God remains, seen from directly below, twisting in the chaos as he pushes light and darkness apart.',
+      zh: '故事的第一天。神在混沌里拧转身体，双手把光和暗推向两边。这是米开朗基罗最后画到的一格，从正下方仰视，据说一天就画完了。在原作里，这是一切秩序的开端：有了分别，世界才开始。',
+      en: 'The first day. God twists in the chaos and pushes light and darkness apart with both hands. It was the last bay Michelangelo reached, seen from directly below, and is said to have been painted in a single day. In the original this is where all order begins: the world starts with a division.',
     },
     meaning: {
-      zh: '光与暗，就是 1 与 0。一切计算都从这样一次分开开始：是或否，有或无。走到这里，故事退回了起点。',
-      en: 'Light and darkness are one and zero. All computation begins with a division like this: yes or no, something or nothing. Here the story has walked back to its beginning.',
+      zh: '神没有动，变的只有被推开的光：它成了屏幕的冷光，边缘碎成像素。光与暗就是 1 与 0，一切计算都从这样一次分开开始。走到天顶尽头，人造的东西越来越少，只剩起点上的这一道光。',
+      en: 'God is untouched; only the light he pushes away has changed. It is now the cold glow of a screen, breaking into pixels at its edge. Light and darkness are one and zero, and all computation begins with a division like this. At the far end of the ceiling, the made things fall away and only this first light remains.',
     },
   },
   {
@@ -29,12 +29,12 @@ export const PANELS = [
       en: 'And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.',
     },
     about: {
-      zh: '同一格里，神出现了两次：正面朝你飞来，一手指日、一手指月；背面飞向深处，指着左下角一株小小的绿芽。',
-      en: 'God appears twice in the same bay: flying towards you, one hand at the sun and one at the moon; and seen from behind, flying away into depth, pointing at a small green shoot in the lower corner.',
+      zh: '神在同一格里出现两次：迎面飞来，一手指日、一手指月；背过身飞走，指向左下的一株绿芽。原作里，日月是为了“作记号，定节令、日子、年岁”：天上有了光，时间才有了刻度。',
+      en: 'God appears twice in one bay: flying towards us, pointing at the sun and the moon; and seen from behind, flying away towards a green shoot in the corner. In the original the lights are set in the sky “for signs, and for seasons, and for days, and years”: with light, time gets its measure.',
     },
     meaning: {
-      zh: '先有光，再有让光不灭的东西。日月成了电与芯片，草木成了在数据里生长的网络。同一刻在两处创造，本身就是并行。',
-      en: 'First light, then whatever keeps it burning. Sun and moon become power and silicon; the plants become networks growing through data. To create in two places at the same moment is already parallel computing.',
+      zh: '太阳成了一片发光的硅晶圆，月亮成了一张硬盘盘片，草芽成了一束光纤。新时代的大光是算力，小光是存储：一个照亮，一个记住。时间的刻度，也从昼夜换成了时钟周期。',
+      en: 'The sun is now a glowing silicon wafer, the moon a hard-disk platter, the shoot a bundle of optical fibre. The greater light of this age is compute and the lesser is storage: one illuminates, the other remembers. Time is no longer measured in days and nights but in clock cycles.',
     },
   },
   {
@@ -46,12 +46,12 @@ export const PANELS = [
       en: 'And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.',
     },
     about: {
-      zh: '神张开双臂迎面飞来，身下是一片灰色的水。从混沌里分出水和陆，是创世里第一次“整理”。',
-      en: 'God flies towards us with open arms above a grey expanse of water. Dividing sea from land out of chaos is the first act of putting the world in order.',
+      zh: '神张开双臂，从水面上迎面飞来，像要把整片水按住。一般认为画的是“使旱地露出来”，也有人认为是神在创造水中的活物。原作里，这是对混沌的第一次整理：水聚到一处，大地才有地方安放。',
+      en: 'God flies towards us over the water with open arms, as if to hold the whole sea down. It is usually read as the gathering of the waters so that dry land appears; some read it as the creation of the creatures of the sea. In the original this is the first ordering of chaos: the waters are gathered so the earth has a place.',
     },
     meaning: {
-      zh: '训练做的正是这件事：在一片杂乱的海里，理出纹路。秩序只出现在被手触到的地方。',
-      en: 'This is what training does: it draws patterns out of a disordered sea. Order appears only where the hand has passed.',
+      zh: '神不改，海里多了发光的光缆。神的手掌下面，光缆排成整齐的平行线；远一点的地方，它们仍乱成一团。在一片杂乱的数据里理出纹路，正是训练在做的事。秩序只出现在手到过的地方。',
+      en: 'God is unchanged; the sea is now threaded with glowing cables. Under his hands they run in calm parallels; further off they are still a tangle. Drawing patterns out of a disordered sea of data is exactly what training does. Order appears only where the hand has passed.',
     },
   },
   {
@@ -66,12 +66,12 @@ export const PANELS = [
       en: 'And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.',
     },
     about: {
-      zh: '天顶上最有名的一格。亚当斜躺在山坡上，手指无力地垂着；神裹在红色斗篷里伸出手。有人说那斗篷的轮廓像一个人脑。两根手指之间，留着一道缝。',
-      en: 'The most famous bay of the ceiling. Adam reclines on the hillside, his finger limp; God reaches out from a red mantle that some have read as the outline of a human brain. Between the two fingers, a gap remains.',
+      zh: '天顶上最有名的一格。亚当已经有了身体，却还没有力气，手指垂着；神被天使簇拥着裹在红斗篷里，伸指要把生命传过去。有人说那斗篷的轮廓像一个人脑。原作的意思是：人照着神的形像被造，生命和灵魂从神那里来。',
+      en: 'The most famous bay of the ceiling. Adam has a body but no strength yet, his finger hanging; God, borne by angels inside a red mantle some have read as the outline of a brain, reaches out to pass on life. Its meaning: man is made in the image of God, and life and soul come from him.',
     },
     meaning: {
-      zh: '当年是神把气吹进人的鼻孔；如今是人伸出手指，要把生气通进一台机器。那道缝始终没有合上。它是距离，也像一个一直在转的“思考中”。',
-      en: 'Once God breathed into the nostrils of man; now a man reaches out to pass that breath into a machine. The gap never closes. It is a distance, and it looks like a spinner that never stops: thinking…',
+      zh: '神的位置换成了马斯克，簇拥他的天使换成了年轻工程师；斜躺在山坡上的，是一台还没开机的瓷白人形机器。造物的不再是神，是一个人和他身后的一整个团队。两根手指之间仍差一点：生命或意识到底有没有传过去，这一格不回答。',
+      en: 'Elon Musk takes the place of God, and the angels around him become young engineers; on the hillside lies a porcelain-white humanoid machine, not yet switched on. The maker is no longer God but a man and the team behind him. The fingers still do not meet: whether life, or mind, passes across is a question this bay leaves open.',
     },
   },
   {
@@ -84,12 +84,12 @@ export const PANELS = [
       en: 'And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof.',
     },
     about: {
-      zh: '亚当靠着一截枯树桩沉睡，夏娃从他身边起身，朝神合掌。',
-      en: 'Adam sleeps against a dead tree stump while Eve rises from his side, her hands joined towards God.',
+      zh: '亚当靠着枯树桩沉睡，夏娃从他身边起身，合掌望向神，神抬手召唤她。这一格在九格的正中。原作里，夏娃取自亚当的肋骨，是“骨中的骨”；神学上也常把她看作从基督肋旁诞生的教会的预表。',
+      en: 'Adam sleeps against a dead stump while Eve rises from his side, hands joined towards God, who raises a hand to call her. It is the central bay of the nine. In the original Eve is taken from Adam’s rib, “bone of my bones”; theologians also read her as a figure of the Church, born from the side of Christ.',
     },
     meaning: {
-      zh: '新的存在从上一个存在身上取出：模型生出模型，数据喂养数据。被取走的那一个，没有醒。',
-      en: 'A new being is taken out of the one before it: models born of models, data fed on data. The one it was taken from does not wake.',
+      zh: '召唤的人换成了奥特曼。沉睡的是上一格那台机器，侧腹的面板被打开，一根线缆连到新的那一台；起身的更新，也更亮。新模型从上一代里取出：用旧模型的输出训练新模型，数据喂养数据。被取走的那一台，没有醒。',
+      en: 'Sam Altman now does the calling. The sleeper is the machine from the bay before, a panel open in its side and a cable running to the new one, which rises sleeker and brighter. New models are drawn from old ones, trained on what the previous generation produced: data fed on data. The one it was taken from does not wake.',
     },
   },
   {
@@ -101,12 +101,12 @@ export const PANELS = [
       en: 'And the LORD God said, Behold, the man is become as one of us, to know good and evil.',
     },
     about: {
-      zh: '一棵树把画面劈成两半。左边，长着女人上身的蛇递出果子，亚当没有等，自己伸手去摘；右边，天使举剑，把两人赶出乐园。',
-      en: 'A tree splits the scene in two. On the left the serpent, with the body of a woman, hands down the fruit while Adam reaches into the branches himself; on the right an angel with a sword drives the pair out of paradise.',
+      zh: '一棵树把画面劈成两半。左边，长着女人上身的蛇把果子递下来，亚当不等，自己伸手去摘；右边，天使举剑把两人赶出乐园，他们一下子老了。原作讲的是人想“如神能知道善恶”，代价是失去乐园，从此要劳作、会死去。',
+      en: 'A tree splits the scene. On the left the serpent, with a woman’s body, hands down the fruit, and Adam reaches into the branches himself; on the right an angel with a sword drives the pair out, suddenly aged. The original is about wanting to “be as gods, knowing good and evil”, and the price: paradise lost, labour and death.',
     },
     meaning: {
-      zh: '“能知道善恶”，就是今天说的对齐。这一次递出果子的是机器，举剑守在门口的，是造机器的人。被逐出乐园的两个人没有回头，他们在看手里的屏幕。',
-      en: 'To know good and evil is what we now call alignment. This time the fruit is offered by a machine, and the one guarding the gate with a sword is one of those who build machines. The two driven out do not look back: they are looking at the screens in their hands.',
+      zh: '蛇成了缠着线缆的机器，递出一颗光做的果子，男人照样自己伸手去够。举剑守在门口的是达里奥·阿莫迪，他的公司把 AI 安全当作主张，手里握的是一把冷光剑：知识可以拿，边界得有人守。只是被逐出的两个人没有回头，他们低头看着手里的屏幕，好像并不觉得失去了什么。',
+      en: 'The serpent is a machine wound in cables, offering an apple made of light, and the man still reaches for it himself. Guarding the gate with a sword of cold light is Dario Amodei, whose company makes AI safety its cause: the knowledge may be taken, but someone must hold the line. Yet the two driven out do not look back; they stare at the screens in their hands, as if nothing had been lost.',
     },
   },
   {
@@ -118,12 +118,12 @@ export const PANELS = [
       en: 'And Noah builded an altar unto the LORD; and took of every clean beast, and of every clean fowl, and offered burnt offerings on the altar.',
     },
     about: {
-      zh: '挪亚一家围着祭坛：有人低头吹火，有人抱柴，有人按住献祭的羊。这一格排在大洪水之前，打乱了故事的顺序；它画的究竟是谁的献祭，历来有争议。',
-      en: 'Noah’s family gathers at the altar: one blows on the fire, one carries wood, one holds down the sacrificial ram. The bay stands before the Flood, out of the story’s order, and whose sacrifice it shows has long been debated.',
+      zh: '洪水退去，挪亚一家围着祭坛献燔祭：有人吹火，有人抱柴，有人按住祭羊。神闻了香气，与人立约，不再用洪水毁灭世界。这一格被画在大洪水之前，打乱了故事的顺序，一般认为是因为洪水需要更大的画格。',
+      en: 'After the Flood, Noah’s family gathers at the altar: one blows on the fire, one carries wood, one holds down the ram. God smells the offering and makes a covenant never again to destroy the world by water. The bay stands before the Flood, out of order, usually explained by the Flood needing the larger field.',
     },
     meaning: {
-      zh: '为了这一切，我们往火里放进了什么？手稿、画作、手艺，还有日夜不熄的电。代价往往在事情发生之前，就已经付了。',
-      en: 'What have we fed into the fire for all this? Manuscripts, paintings, crafts, and power that never sleeps. The price is often paid before the event.',
+      zh: '站在祭坛后的是黄仁勋，坛上燃着的是一块 GPU。工人在接电源、扛线缆和机柜，有人把成摞的手稿和画作推向祭坛。这一轮造物烧的是电，喂进去的是人写过、画过的一切。献祭被画在洪水之前，就像代价总在后果到来之前就已付清。',
+      en: 'Behind the altar stands Jensen Huang, and on it burns a GPU. Workers plug in power, haul cables and servers, and push stacks of manuscripts and paintings towards the altar. This round of creation burns electricity and is fed with everything people have written and painted. The sacrifice comes before the Flood, as the price is so often paid before the consequence arrives.',
     },
   },
   {
@@ -135,12 +135,12 @@ export const PANELS = [
       en: 'And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and Noah only remained alive, and they that were with him in the ark.',
     },
     about: {
-      zh: '米开朗基罗在天顶上最早画的大场面之一。人们背着家当往高处逃，有人举棍把别人打下船，方舟在远处。人物又小又挤，那时他还没有放开手。',
-      en: 'One of the first great scenes Michelangelo painted on the ceiling. People carry their belongings to high ground, a man clubs others away from an overloaded boat, the ark waits in the distance. The figures are small and crowded; his hand had not yet loosened.',
+      zh: '米开朗基罗最早画的大场面之一。人们背着家当往高处逃，船上有人举棍把别人打下去，一群人挤在礁石上的帐篷下，方舟在远处，门口已经没有位置。原作讲的是审判与拣选：洪水是惩罚，方舟只救少数人。',
+      en: 'One of the first great scenes Michelangelo painted. People carry their belongings to high ground, a man clubs others off an overloaded boat, a crowd huddles under a tent on a rock, and the ark waits in the distance with no room at its door. The original is about judgement and the chosen: the Flood punishes, the ark saves only a few.',
     },
     meaning: {
-      zh: '涌来的不只是水，还有一夜之间多出来的千万张图、千万段话。逃的时候带走什么，把谁推下船，方舟上装什么，都是人自己的选择。',
-      en: 'What rises is not only water but the millions of images and words that appeared overnight. What we carry as we flee, whom we push from the boat, what goes into the ark: these remain our own choices.',
+      zh: '人都换了现代衣服，背着电脑、显示器和服务器逃；水里漂满发光的屏幕和纸页，好像洪水本身就是图像和文字。方舟成了一座没有窗的数据中心，门口亮着一盏冷光。涌来的东西谁也挡不住；上哪条船、带走什么、把谁推下去，仍是人自己的选择。',
+      en: 'Everyone now wears modern clothes and flees with laptops, monitors and servers; the water is full of glowing screens and pages, as if the flood itself were made of images and text. The ark is a windowless data centre with one cold light at its door. No one can hold back what is rising; which boat to board, what to carry, whom to push off, remain our own choices.',
     },
   },
   {
@@ -152,12 +152,12 @@ export const PANELS = [
       en: 'And Noah began to be an husbandman, and he planted a vineyard: And he drank of the wine, and was drunken; and he was uncovered within his tent.',
     },
     about: {
-      zh: '离入口最近的一格，米开朗基罗从这一头开始画。挪亚是第一个种葡萄、酿酒的人；画里他醉倒在酒桶旁，一个儿子指着他，另外两个扭过头去，替他盖上衣服。背景里，他还在挥锄挖地。',
-      en: 'The bay nearest the entrance, where Michelangelo began. Noah was the first to plant a vineyard and make wine; here he lies drunk beside the vat, one son pointing at him while the other two turn their faces away and cover him. In the background he is still digging the soil.',
+      zh: '离入口最近的一格，米开朗基罗从这里画起。挪亚第一个种葡萄、酿酒，醉倒在酒桶旁；一个儿子指着他，另两个替他盖上衣服，背景里他还在挥锄。按新柏拉图主义的读法，这里是人离神最远的地方，观者从这里出发，一路走回创世。',
+      en: 'The bay nearest the entrance, where Michelangelo began. Noah, the first to plant a vineyard and make wine, lies drunk by the vat; one son points, the other two cover him, and in the background he is still digging. In a Neoplatonic reading this is where man is farthest from God, and the viewer sets out from here on the way back to creation.',
     },
     meaning: {
-      zh: '第一个造出酒的人，被自己的发明灌醉了。旁人有的指点，有的不忍看，默默替他遮上。背景里那个还在劳动的人，是醉倒之前的他，也是 2026 年的我们。',
-      en: 'The first man to make wine is overcome by his own invention. Some point; others cannot look, and quietly cover him. The man still working in the background is who he was before he fell, and who we are in 2026.',
+      zh: '醉倒的是一个无名的老创业者，西装皱着，睡在机柜旁，脚边一个空杯子、一只咖啡杯；年轻员工替他盖上外套，有人指着他。背景里那个埋光缆的人，是醉倒之前的他。人先被自己造出来的东西灌醉；他醒来之前，是替他遮盖还是指点，由下一代决定。',
+      en: 'The drunk is an anonymous old founder in a rumpled suit, asleep by a server cabinet with an empty glass and a coffee cup at his feet; young employees cover him with a jacket while one points. The man laying cable in the background is who he was before he fell. We are intoxicated first by what we make; whether to cover him or point at him before he wakes is for the next generation to decide.',
     },
   },
 ];
@@ -169,6 +169,8 @@ export const UI = {
     lead: '从入口走向祭坛，故事一路倒退回创世之初。',
     scroll: '向下滚动，抬头',
     hold: '按住画面，看原作',
+    origLabel: '原作 · 米开朗基罗，1512',
+    nowLabel: '今作 · 二〇二六',
     pending: '待绘',
     finger: '拖动左边那根手指',
     lens: '移到水面上，凑近看',
@@ -194,6 +196,8 @@ export const UI = {
     lead: 'Walk from the entrance to the altar, and the story runs backwards to the first day.',
     scroll: 'Scroll down, and look up',
     hold: 'Press and hold to see the original',
+    origLabel: 'The original · Michelangelo, 1512',
+    nowLabel: 'Retold · 2026',
     pending: 'Not yet painted',
     finger: 'Drag the finger on the left',
     lens: 'Move over the water to look closer',

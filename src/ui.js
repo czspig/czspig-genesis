@@ -79,8 +79,10 @@ export function createUI({ panels, onJump }) {
     card.querySelector('.ref').textContent = cur.ref[lang];
     card.querySelector('h2').textContent = cur.title[lang];
     card.querySelector('.verse').textContent = cur.verse[lang];
-    card.querySelector('.about').textContent = cur.about[lang];
-    card.querySelector('.meaning').textContent = cur.meaning[lang];
+    card.querySelector('.text > .about .lab').textContent = u.origLabel;
+    card.querySelector('.text > .about p').textContent = cur.about[lang];
+    card.querySelector('.text > .meaning .lab').textContent = u.nowLabel;
+    card.querySelector('.text > .meaning p').textContent = cur.meaning[lang];
     card.querySelector('.badge').textContent = u.pending;
     card.classList.toggle('pending', !!pending);
     const hint = cur.key === '04' ? u.finger : cur.lens ? u.lens : u.hold;
