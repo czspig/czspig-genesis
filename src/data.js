@@ -16,8 +16,8 @@ export const PANELS = [
       en: 'The first day. God twists in the chaos and pushes light and darkness apart with both hands. It was the last bay Michelangelo reached, seen from directly below, and is said to have been painted in a single day. In the original this is where all order begins: the world starts with a division.',
     },
     meaning: {
-      zh: '神没有动，变的只有被推开的光：它成了屏幕的冷光，边缘碎成像素。光与暗就是 1 与 0，一切计算都从这样一次分开开始。走到天顶尽头，人造的东西越来越少，只剩起点上的这一道光。',
-      en: 'God is untouched; only the light he pushes away has changed. It is now the cold glow of a screen, breaking into pixels at its edge. Light and darkness are one and zero, and all computation begins with a division like this. At the far end of the ceiling, the made things fall away and only this first light remains.',
+      zh: '神没有动，变的只有被推开的光：它成了屏幕那样的冰青色冷光。光与暗就是 1 与 0，一切计算都从这样一次分开开始。走到天顶尽头，人造的东西越来越少，只剩起点上的这一道光。',
+      en: 'God is untouched; only the light he pushes away has changed. It is now the icy, cold glow of a screen. Light and darkness are one and zero, and all computation begins with a division like this. At the far end of the ceiling, the made things fall away and only this first light remains.',
     },
   },
   {
@@ -105,8 +105,8 @@ export const PANELS = [
       en: 'A tree splits the scene. On the left the serpent, with a woman’s body, hands down the fruit, and Adam reaches into the branches himself; on the right an angel with a sword drives the pair out, suddenly aged. The original is about wanting to “be as gods, knowing good and evil”, and the price: paradise lost, labour and death.',
     },
     meaning: {
-      zh: '蛇成了缠着线缆的机器，递出一颗光做的果子，男人照样自己伸手去够。举剑守在门口的是达里奥·阿莫迪，他的公司把 AI 安全当作主张，手里握的是一把冷光剑：知识可以拿，边界得有人守。只是被逐出的两个人没有回头，他们低头看着手里的屏幕，好像并不觉得失去了什么。',
-      en: 'The serpent is a machine wound in cables, offering an apple made of light, and the man still reaches for it himself. Guarding the gate with a sword of cold light is Dario Amodei, whose company makes AI safety its cause: the knowledge may be taken, but someone must hold the line. Yet the two driven out do not look back; they stare at the screens in their hands, as if nothing had been lost.',
+      zh: '蛇成了缠着线缆的机器，递出一颗光做的果子，男人照样自己伸手去够。举剑守在门口的是达里奥·阿莫迪，他的公司把 AI 安全当作主张，手里握的是一把冷光剑：知识可以拿，边界得有人守。只是被逐出的两个人，一个抬手挡着剑光，手机却没放下，一个低头盯着屏幕，好像并不觉得失去了什么。',
+      en: 'The serpent is a machine wound in cables, offering an apple made of light, and the man still reaches for it himself. Guarding the gate with a sword of cold light is Dario Amodei, whose company makes AI safety its cause: the knowledge may be taken, but someone must hold the line. Yet of the two driven out, one raises a hand against the light without letting go of his phone, and the other stares at her screen, as if nothing had been lost.',
     },
   },
   {
