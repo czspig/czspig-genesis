@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>新创世纪 · Genesis, Retold</title>
+  <meta name="description" content="米开朗基罗西斯廷天顶《创世纪》九格的 AI 时代重绘。从入口走向祭坛，故事一路倒退回创世之初。">
+  <meta name="theme-color" content="#0d0b09">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Pinyon+Script&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="gl"></canvas>
+  <div id="scroll"></div>
+
+  <header>
+    <div id="brand">新创世纪</div>
+    <nav>
+      <button id="btn-toc">目录</button>
+      <button id="btn-music" aria-label="音乐"><span class="ico" aria-hidden="true">♪</span><span class="t">音乐</span></button>
+      <button id="btn-lang" class="pill">EN</button>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h1>新创世纪</h1>
+    <p class="sub"></p>
+    <p class="lead"></p>
+    <p class="hint"></p>
+  </section>
+
+  <aside id="card" aria-live="polite">
+    <div class="ref"></div>
+    <h2></h2>
+    <blockquote class="verse"></blockquote>
+    <div class="text">
+      <p class="about"></p>
+      <p class="meaning"></p>
+    </div>
+    <div class="badge"></div>
+    <div class="hint"></div>
+  </aside>
+
+  <nav id="rail" aria-label="经文刻度"></nav>
+
+  <section id="ending">
+    <p class="line"></p>
+    <div class="actions">
+      <button id="btn-credits"></button>
+      <button id="btn-top"></button>
+    </div>
+  </section>
+
+  <svg id="thread" aria-hidden="true">
+    <defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <line stroke="#ddf6ff" stroke-width="2" stroke-linecap="round" filter="url(#glow)"/>
+    <circle r="3.5" fill="#ddf6ff" filter="url(#glow)"/>
+  </svg>
+
+  <dialog id="toc">
+    <h3></h3>
+    <div class="grid"></div>
+    <button data-close></button>
+  </dialog>
+
+  <dialog id="credits">
+    <h3></h3>
+    <div class="body"></div>
+    <button data-close></button>
+  </dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

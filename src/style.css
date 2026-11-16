@@ -1,0 +1,148 @@
+:root {
+  --bg: #0d0b09;
+  --ink: #ece2cc;
+  --ink-dim: #b9ad94;
+  --gold: #c9a45c;
+  --cold: #ddf6ff;
+  --card: rgba(16, 13, 10, 0.82);
+  --zh: 'Ma Shan Zheng', 'KaiTi', 'STKaiti', serif;
+  --en: 'Cormorant Garamond', 'Georgia', serif;
+  --script: 'Pinyon Script', 'Cormorant Garamond', cursive;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font-family: var(--zh); font-size: 18px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+html[lang='en'] body { font-family: var(--en); font-size: 19px; line-height: 1.55; }
+button { font: inherit; color: inherit; cursor: pointer; }
+
+#gl { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; display: block; touch-action: pan-y; }
+#scroll { position: relative; width: 1px; pointer-events: none; }
+
+/* ---------- 顶栏 ---------- */
+header {
+  position: fixed; top: 0; left: 0; right: 0; height: 56px; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px; padding-top: env(safe-area-inset-top);
+  background: linear-gradient(rgba(13, 11, 9, 0.85), rgba(13, 11, 9, 0));
+  pointer-events: none;
+}
+#brand { font-size: 22px; letter-spacing: 0.12em; color: var(--gold); }
+html[lang='en'] #brand { font-family: var(--script); font-size: 28px; letter-spacing: 0; }
+header nav { display: flex; gap: 8px; pointer-events: auto; }
+header nav button {
+  background: rgba(20, 16, 12, 0.6); border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: 999px; padding: 4px 14px; font-size: 15px; line-height: 1.6;
+}
+header nav button:hover { border-color: var(--gold); }
+#btn-lang { border-color: var(--gold); color: var(--gold); font-family: var(--en); font-weight: 500; min-width: 48px; }
+html[lang='en'] #btn-lang { font-family: var(--zh); }
+#btn-music .ico { margin-right: 4px; opacity: 0.6; }
+#btn-music.on { border-color: var(--cold); color: var(--cold); }
+#btn-music.on .ico { opacity: 1; }
+
+/* ---------- 开场 ---------- */
+#intro {
+  position: fixed; inset: 0; z-index: 5; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; padding: 0 20px;
+  pointer-events: none; opacity: 1;
+  background: radial-gradient(ellipse at center, rgba(13, 11, 9, 0.55), rgba(13, 11, 9, 0.9));
+}
+#intro h1 { margin: 0; font-weight: 400; font-size: clamp(56px, 11vw, 120px); letter-spacing: 0.18em; color: var(--ink); text-indent: 0.18em; }
+html[lang='en'] #intro h1 { font-family: var(--script); letter-spacing: 0; text-indent: 0; font-size: clamp(60px, 12vw, 132px); }
+#intro .sub { margin: 8px 0 0; color: var(--gold); font-size: 17px; letter-spacing: 0.08em; }
+#intro .lead { margin: 22px 0 0; color: var(--ink-dim); max-width: 32em; }
+#intro .hint { margin-top: 44px; font-size: 15px; color: var(--ink-dim); animation: breathe 2.8s ease-in-out infinite; }
+#intro .hint::after { content: '↓'; display: block; margin-top: 4px; }
+body:not(.ready) #intro .hint { opacity: 0.3; }
+@keyframes breathe { 50% { opacity: 0.45; transform: translateY(4px); } }
+
+/* ---------- 展签 ---------- */
+#card {
+  position: fixed; z-index: 6; background: var(--card);
+  border: 1px solid rgba(201, 164, 92, 0.28); border-radius: 4px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: opacity 0.6s, transform 0.6s;
+  overflow-y: auto; overscroll-behavior: contain;
+}
+#card.show { opacity: 1; transform: none; pointer-events: auto; }
+body.wide #card { right: 24px; top: 72px; width: 380px; max-height: calc(100vh - 100px); padding: 26px 28px 22px; }
+body:not(.wide) #card {
+  left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+  max-height: 40vh; max-height: 40dvh; padding: 16px 18px 14px; font-size: 16px;
+}
+#card .ref { color: var(--gold); font-size: 14px; letter-spacing: 0.1em; }
+#card h2 { margin: 2px 0 12px; font-weight: 400; font-size: 30px; line-height: 1.3; }
+html[lang='en'] #card h2 { font-family: var(--script); font-size: 36px; line-height: 1.15; }
+body:not(.wide) #card h2 { font-size: 24px; margin-bottom: 8px; }
+html[lang='en'] body:not(.wide) #card h2 { font-size: 30px; }
+#card .verse { margin: 0 0 14px; padding-left: 12px; border-left: 2px solid rgba(201, 164, 92, 0.5); color: var(--ink-dim); font-size: 0.92em; }
+html[lang='en'] #card .verse { font-style: italic; }
+#card .text { display: grid; }
+#card .about, #card .meaning { grid-area: 1 / 1; margin: 0; transition: opacity 0.7s; }
+#card .meaning { opacity: 0; }
+#card.meaning .about { opacity: 0; }
+#card.meaning .meaning { opacity: 1; }
+#card .meaning::first-letter { color: var(--cold); }
+#card .badge { display: none; margin-top: 12px; font-size: 13px; color: var(--gold); border: 1px dashed rgba(201, 164, 92, 0.6); border-radius: 999px; padding: 1px 10px; width: fit-content; }
+#card.pending .badge { display: block; }
+#card .hint { margin-top: 10px; font-size: 13px; color: var(--cold); opacity: 0.8; min-height: 1em; }
+
+/* ---------- 经文刻度 ---------- */
+#rail {
+  position: fixed; z-index: 6; left: 14px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 6px; opacity: 0; transition: opacity 0.6s; pointer-events: none;
+}
+#rail.show { opacity: 1; pointer-events: auto; }
+#rail button { background: none; border: 0; padding: 2px 0; text-align: left; font-size: 12px; color: var(--ink-dim); opacity: 0.5; font-family: var(--en); letter-spacing: 0.04em; }
+#rail button::before { content: ''; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: currentColor; vertical-align: middle; }
+#rail button.on { color: var(--cold); opacity: 1; }
+#rail button:hover { opacity: 1; }
+body:not(.wide) #rail { display: none; }
+
+/* ---------- 结尾 ---------- */
+#ending {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; text-align: center;
+  padding: 20px 16px calc(28px + env(safe-area-inset-bottom));
+  background: linear-gradient(rgba(13, 11, 9, 0), rgba(13, 11, 9, 0.9) 40%);
+  opacity: 0; visibility: hidden;
+}
+#ending .line { margin: 0 0 14px; font-size: clamp(26px, 4vw, 40px); letter-spacing: 0.12em; }
+html[lang='en'] #ending .line { font-family: var(--script); letter-spacing: 0; font-size: clamp(32px, 5vw, 52px); }
+#ending .actions { display: flex; gap: 12px; justify-content: center; }
+#ending button { background: none; border: 1px solid rgba(201, 164, 92, 0.45); border-radius: 999px; padding: 3px 16px; font-size: 15px; color: var(--ink-dim); }
+#ending button:hover { color: var(--ink); border-color: var(--gold); }
+
+/* ---------- 手指连线 ---------- */
+#thread { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 4; pointer-events: none; opacity: 0; }
+
+/* ---------- 弹窗 ---------- */
+dialog {
+  background: #15110d; color: var(--ink); border: 1px solid rgba(201, 164, 92, 0.4); border-radius: 6px;
+  padding: 22px 24px 18px; max-width: min(860px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+}
+dialog::backdrop { background: rgba(5, 4, 3, 0.7); }
+dialog h3 { margin: 0 0 14px; font-weight: 400; color: var(--gold); font-size: 22px; }
+dialog [data-close] { margin-top: 16px; background: none; border: 1px solid rgba(201, 164, 92, 0.45); border-radius: 999px; padding: 2px 16px; color: var(--ink-dim); }
+#toc .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+#toc .grid button { background: none; border: 0; padding: 0; text-align: left; display: flex; flex-direction: column; gap: 2px; }
+#toc .grid img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 2px; border: 1px solid rgba(201, 164, 92, 0.25); }
+#toc .grid button:hover img { border-color: var(--gold); }
+#toc .r { font-size: 12px; color: var(--gold); margin-top: 4px; }
+#toc .n { font-size: 15px; line-height: 1.3; }
+#credits .body { font-size: 15px; color: var(--ink-dim); max-width: 36em; }
+#credits .body p { margin: 0 0 10px; }
+@media (max-width: 560px) {
+  #toc .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  header nav button { padding: 3px 10px; font-size: 14px; }
+  #btn-music .t { display: none; }
+  #brand { font-size: 19px; }
+}
+
+body.no-gl #gl, body.no-gl #card, body.no-gl #rail { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  #intro .hint { animation: none; }
+  #card { transition: opacity 0.2s; transform: none; }
+}

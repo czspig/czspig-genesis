@@ -1,0 +1,14 @@
+{
+  "name": "czspig-genesis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5413 --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --port 5413 --host 127.0.0.1",
+    "art": "python tools/build-art.py"
+  },
+  "devDependencies": {
+    "vite": "8.3.5"
+  }
+}
