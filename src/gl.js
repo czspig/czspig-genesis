@@ -50,6 +50,16 @@ out vec4 o;
 const vec3 COLD = vec3(0.866, 0.965, 1.0);
 
 float h21(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+float vnoise(vec2 p) {
+  vec2 i = floor(p), f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(h21(i), h21(i + vec2(1, 0)), f.x), mix(h21(i + vec2(0, 1)), h21(i + vec2(1, 1)), f.x), f.y);
+}
+float fbm(vec2 p) {
+  float v = 0.0, a = 0.5;
+  for (int k = 0; k < 5; k++) { v += a * vnoise(p); p = p * 2.03 + 7.1; a *= 0.5; }
+  return v;
+}
 
 vec3 water(vec2 s, vec3 base) {
   float l = dot(base, vec3(0.299, 0.587, 0.114));
@@ -80,24 +90,21 @@ void main() {
   else if (uWater8 > 0.5) ai = water(s, orig);
 
   float d = uMode == 1 ? (1.0 + uExt - s.y) / (1.0 + 2.0 * uExt) : length((s - uOrigin) * uPx) / uMaxD;
-  float w = 0.32;
-  float f = clamp((uP * (1.0 + w) - d) / w, 0.0, 1.0);
-  float amt = sin(f * 3.14159) * (1.0 - uRM);
-
-  float shown = smoothstep(0.42, 0.58, uRM > 0.5 ? uP : f);
+  // 转场：新画像墨渗进灰泥一样，沿着不规则的边慢慢洇开，边上一道冷光
+  vec2 q = s * uPx / 260.0;
+  float wob = fbm(q + vec2(uTime * 0.03, 0.0)) - 0.5;
+  float e = d + wob * 0.22;
+  float th = mix(-0.14, 1.14, uP);
+  float shown = uRM > 0.5 ? smoothstep(0.42, 0.58, uP) : 1.0 - smoothstep(th - 0.018, th, e);
   vec3 col = mix(orig, ai, shown);
-
-  // 扩散式噪声：越接近转场中段，噪点越粗、越多
-  float cs = mix(1.0, 7.0, amt);
-  vec2 cell = floor(gl_FragCoord.xy / cs);
-  float t = floor(uTime * 14.0);
-  vec3 n = vec3(h21(cell + t), h21(cell + t + 17.1), h21(cell + t + 31.7));
-  n = mix(vec3(dot(n, vec3(0.333))), n, 0.55);
-  col = mix(col, n, amt * 0.94);
+  float live = (1.0 - uRM) * step(0.001, uP) * step(uP, 0.999);
+  float x = (e - th) / 0.011;
+  col += COLD * exp(-x * x) * 0.85 * live;                       // 细细的一道冷光
+  col = mix(col, col * 1.12 + COLD * 0.05, exp(-x * x / 30.0) * 0.6 * live); // 冷光两侧淡淡的晕
 
   if (uGlow.w > 0.0) {
     float g = exp(-pow(length((s - uGlow.xy) * uPx) / uGlow.z, 2.0));
-    col += COLD * g * uGlow.w * smoothstep(0.6, 1.0, f) * (1.0 - uHold);
+    col += COLD * g * uGlow.w * shown * smoothstep(0.85, 1.0, uP) * (1.0 - uHold);
   }
 
   col = mix(col, orig, uHold);
